@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Demazon.com - Your Online Shopping Destination</title>
+    <style>
+        body {
+            background-color: #FFFFFF;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #000000;
+        }
+
+        table {
+            border: 0;
+            cellspacing: 0;
+            cellpadding: 0;
+        }
+
+        .header {
+            background-color: #3366CC;
+            padding: 10px;
+        }
+
+        .header img {
+            height: 60px;
+        }
+
+        .navbar {
+            background-color: #6699FF;
+            padding: 5px;
+            border-top: 2px solid #000000;
+            border-bottom: 2px solid #000000;
+        }
+
+        .navbar a {
+            color: #FFFF00;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 15px;
+            font-size: 14px;
+        }
+
+        .navbar a:hover {
+            color: #FFFFFF;
+            text-decoration: underline;
+        }
+
+        .main-content {
+            padding: 20px;
+            background-image: url('data:image/gif;base64,R0lGODlhBAAEAIAAAP///wAAACH5BAEAAAAALAAAAAAEAAQAAAIFhI+pWAA7');
+        }
+
+        .welcome-banner {
+            background: linear-gradient(to right, #FF6600, #FFCC00);
+            padding: 15px;
+            border: 3px solid #000000;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .welcome-banner h1 {
+            color: #FFFFFF;
+            text-shadow: 2px 2px #000000;
+            font-size: 28px;
+            margin: 0;
+        }
+
+        .product-grid {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: center;
+            gap: 10px;
+            overflow-x: auto;
+        }
+
+        .product {
+            background-color: #F0F0F0;
+            border: 3px solid #000000;
+            padding: 15px;
+            text-align: center;
+            width: 220px;
+            min-height: 480px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex-shrink: 0;
+        }
+
+        .product img {
+            width: 180px;
+            height: 180px;
+            border: 2px solid #000000;
+            object-fit: cover;
+        }
+
+        .product h3 {
+            color: #0000FF;
+            font-size: 16px;
+            margin: 10px 0 5px 0;
+        }
+
+        .product p {
+            font-size: 12px;
+            margin: 5px 0;
+        }
+
+        .price {
+            color: #FF0000;
+            font-size: 20px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .add-to-cart {
+            background-color: #FFCC00;
+            color: #000000;
+            border: 2px solid #000000;
+            padding: 8px 16px;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 14px;
+            margin-top: auto;
+        }
+
+        .add-to-cart:hover {
+            background-color: #FF9900;
+        }
+
+        .cart-section {
+            position: fixed;
+            right: 10px;
+            top: 100px;
+            background-color: #FFFF99;
+            border: 3px solid #000000;
+            padding: 15px;
+            width: 250px;
+        }
+
+        .cart-section h2 {
+            color: #CC0000;
+            font-size: 18px;
+            margin: 0 0 10px 0;
+        }
+
+        .cart-item {
+            background-color: #FFFFFF;
+            border: 1px solid #000000;
+            padding: 8px;
+            margin: 5px 0;
+            font-size: 12px;
+        }
+
+        .cart-total {
+            font-size: 16px;
+            font-weight: bold;
+            color: #CC0000;
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 2px solid #000000;
+        }
+
+        .checkout-btn {
+            background-color: #00CC00;
+            color: #FFFFFF;
+            border: 2px solid #000000;
+            padding: 10px;
+            width: 100%;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        .checkout-btn:hover {
+            background-color: #009900;
+        }
+
+        .footer {
+            background-color: #3366CC;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+            border-top: 3px solid #000000;
+        }
+
+        .blink {
+            animation: blink 1s linear infinite;
+        }
+
+        @keyframes blink {
+            0%, 49% { opacity: 1; }
+            50%, 100% { opacity: 0; }
+        }
+
+        marquee {
+            background-color: #FFFF00;
+            padding: 5px;
+            border: 2px solid #000000;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <table width="100%" cellpadding="0" cellspacing="0">
+        <tr>
+            <td class="header">
+                <center>
+                    <img src="https://raw.githubusercontent.com/Aditya-Gamer011/Images/main/1eade359-1ff7-4723-92c8-ed699ed62c0e.png" alt="Demazon">
+                </center>
+            </td>
+        </tr>
+        <tr>
+            <td class="navbar">
+                <center>
+                    <a href="#home">HOME</a>
+                    <a href="#products">PRODUCTS</a>
+                    <a href="#deals">HOT DEALS!!!</a>
+                    <a href="#about">ABOUT US</a>
+                    <a href="#contact">CONTACT</a>
+                </center>
+            </td>
+        </tr>
+    </table>
+
+    <div class="main-content">
+        <div class="welcome-banner">
+            <h1>🌟 WELCOME TO DEMAZON.COM 🌟</h1>
+            <p style="color: #FFFFFF; font-size: 14px;">Your #1 Source for Random Stuff Since 1998!</p>
+        </div>
+
+        <marquee behavior="scroll" direction="left" scrollamount="8">
+            <b>🔥 HOT DEALS! LIMITED TIME ONLY! 🔥 FREE SHIPPING ON ORDERS OVER $500! 🔥 NEW ITEMS ADDED DAILY! 🔥</b>
+        </marquee>
+
+        <center>
+            <h2 style="color: #CC0000;">Featured Products</h2>
+            <p><span class="blink">★★★ BEST SELLERS ★★★</span></p>
+        </center>
+
+        <center>
+            <div class="product-grid">
+                <div class="product" id="product-1">
+                    <img src="https://raw.githubusercontent.com/Aditya-Gamer011/Images/main/demon_eyes.jpg" alt="Demon Eyes">
+                    <h3>Demon Eyes</h3>
+                    <p>Spooky and mysterious! Perfect for your collection.</p>
+                    <div class="price">$66.66</div>
+                    <button class="add-to-cart" onclick="addToCart('Demon Eyes', 66.66)">ADD TO CART</button>
+                </div>
+
+                <div class="product" id="product-2">
+                    <img src="https://raw.githubusercontent.com/Aditya-Gamer011/Images/main/mee.jpeg" alt="Me">
+                    <h3>Me</h3>
+                    <p>yessss u can now buy me for the questionable price of 1 margarita pizza!!</p>
+                    <div class="price">$12.99</div>
+                    <p style="font-size: 10px;">(1 Margarita Pizza)</p>
+                    <button class="add-to-cart" onclick="addToCart('Me', 12.99)">ADD TO CART</button>
+                </div>
+
+                <div class="product" id="product-3">
+                    <img src="https://raw.githubusercontent.com/Aditya-Gamer011/Images/main/chem_book.jpeg" alt="Chemistry Book">
+                    <h3>My Old Chemistry Book</h3>
+                    <p>Slightly used. May contain doodles and tears.</p>
+                    <div class="price">$8.50</div>
+                    <button class="add-to-cart" onclick="addToCart('My Old Chemistry Book', 8.50)">ADD TO CART</button>
+                </div>
+
+                <div class="product" id="product-4">
+                    <img src="https://raw.githubusercontent.com/Aditya-Gamer011/Images/main/boba.jpg" alt="Boba">
+                    <h3>Boba for Me</h3>
+                    <p>u heard it right...you're buying it for me :)</p>
+                    <div class="price">-$5.00</div>
+                    <p style="font-size: 10px; color: #009900;">(Yes, I PAY YOU!)</p>
+                    <button class="add-to-cart" onclick="addToCart('Boba for Me', -5.00)">ADD TO CART</button>
+                </div>
+            </div>
+        </center>
+    </div>
+
+    <div class="cart-section">
+        <h2>🛒 YOUR CART</h2>
+        <div id="cart-items">
+            <p style="font-size: 12px; color: #666;">Your cart is empty!</p>
+        </div>
+        <div class="cart-total">
+            Total: $<span id="cart-total">0.00</span>
+        </div>
+        <button class="checkout-btn" onclick="checkout()">CHECKOUT NOW!</button>
+        <button class="add-to-cart" onclick="clearCart()" style="width: 100%; margin-top: 5px;">CLEAR CART</button>
+    </div>
+
+    <div class="footer">
+        <p><b>DEMAZON.COM &copy; 1998-2026</b></p>
+        <p>Best viewed with Netscape Navigator 4.0 or Internet Explorer 5.0</p>
+        <p style="font-size: 10px;">800x600 resolution recommended</p>
+        <p style="font-size: 8px;">This site is best viewed with eyes open</p>
+    </div>
+
+    <script>
+        let cart = [];
+
+        function addToCart(name, price) {
+            cart.push({ name: name, price: price });
+            updateCart();
+            alert('Added to cart: ' + name);
+        }
+
+        function updateCart() {
+            const cartItemsDiv = document.getElementById('cart-items');
+            const cartTotalSpan = document.getElementById('cart-total');
+
+            if (cart.length === 0) {
+                cartItemsDiv.innerHTML = '<p style="font-size: 12px; color: #666;">Your cart is empty!</p>';
+                cartTotalSpan.textContent = '0.00';
+                return;
+            }
+
+            let html = '';
+            let total = 0;
+
+            cart.forEach((item, index) => {
+                html += `<div class="cart-item">
+                    ${item.name} - $${item.price.toFixed(2)}
+                    <button onclick="removeFromCart(${index})" style="float: right; font-size: 10px; background: #FF0000; color: #FFF; border: 1px solid #000; cursor: pointer; padding: 2px 5px;">X</button>
+                </div>`;
+                total += item.price;
+            });
+
+            cartItemsDiv.innerHTML = html;
+            cartTotalSpan.textContent = total.toFixed(2);
+        }
+
+        function removeFromCart(index) {
+            cart.splice(index, 1);
+            updateCart();
+        }
+
+        function clearCart() {
+            cart = [];
+            updateCart();
+            alert('Cart cleared!');
+        }
+
+        function checkout() {
+            if (cart.length === 0) {
+                alert('Your cart is empty! Add some items first!');
+                return;
+            }
+
+            let total = 0;
+            cart.forEach(item => total += item.price);
+
+            let message = '🎉 CHECKOUT COMPLETE! 🎉\n\n';
+            message += 'Items purchased:\n';
+            cart.forEach(item => {
+                message += `- ${item.name}: $${item.price.toFixed(2)}\n`;
+            });
+            message += `\nTotal: $${total.toFixed(2)}\n\n`;
+            message += 'Thank you for shopping at Demazon!\n';
+            message += 'Your order will arrive in 4-6 weeks... maybe.';
+
+            alert(message);
+            cart = [];
+            updateCart();
+        }
+    </script>
+
+</body>
+</html>
+
